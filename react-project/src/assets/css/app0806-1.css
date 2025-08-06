@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.card {
+  width: 250px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /*  卡片陰影 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /*  平滑動畫 */
+}
+
+/* 滑鼠滑上去時浮起來的動畫效果 */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+img{
+    width: 100%;
+}
+
+.card-title{
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.btn{
+    color: white;
+    text-decoration: none;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    display: block; /*因為是超連結行內元素，所以轉成區塊元素，才可以設定寬高*/
+    text-align: center;
+}
+.card-text{
+    margin-bottom: 20px;
+}
+.card-body{
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.container{
+    /* width: 960px; */
+    display: flex;
+    justify-content: center;
+}
