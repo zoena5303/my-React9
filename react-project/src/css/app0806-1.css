@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding:0 ;
+}
+.card{
+    width: 250px;
+    margin: 10px ;
+}
+img{
+    width: 100%;
+}
+.card-title{
+    font-size: 24px;
+    margin: 10px 0;
+
+}
+.btn{
+    color: white;
+    text-decoration:none;
+    border:1px solid #ddd;
+    background-color: #333;
+    padding: 10px ;
+    border-radius:5px;
+    margin: 20 px ;
+    margin-top: 10px;
+    display: block;/*因為是超連結行內元素，所以要轉成區塊元素，才可以設定寬高*/
+    text-align: center;
+
+}
+
+.card-text{
+margin-bottom: 20px;
+
+
+
+}
+
+
+.card-body{
+   /* border:1px solid red;*/
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.container{
+    width: 960px;
+    display: inline-flex;
+    justify-content: center;
+
+
+}
