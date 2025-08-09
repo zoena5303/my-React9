@@ -32,7 +32,7 @@ const App = () => {
       <div className="container" style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
         {Object.values(photos).map((item, index) => (
           <div className="card" style={{ width: '18rem' }} key={index}>
-            <img src={item.imgURL} className="card-img-top" alt={item.title} />
+            <img src={photos.photo1.imgURL} className="card-img-top" alt={item.title} />
             <div className="card-body">
               <h5 className="card-title">{item.title}</h5>
               <p className="card-text">{item.desc}</p>
