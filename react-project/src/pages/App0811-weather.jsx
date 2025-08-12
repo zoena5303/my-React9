@@ -1,47 +1,66 @@
-// src/pages/App0811-weather.jsx
-// src/pages/App0811-weather.jsx
-import '../css/App0811.css';
+import { useEffect } from 'react';
+import '../css/app0811.css'
+import { BsFillUmbrellaFill } from "react-icons/bs";
+import axios from "axios";
 
-
-export default function App() {
-  const weatherData = [
-    {
-      date: '11日',
-      time: '上午6:00 ~ 下午6:00',
-      icon: '🌤',
-      desc: '晴午後短暫雷陣雨',
-      rain: '80%'
-    },
-    {
-      date: '11日',
-      time: '下午6:00 ~ 上午6:00',
-      icon: '🌧',
-      desc: '多雲短暫陣雨',
-      rain: '40%'
-    },
-    {
-      date: '12日',
-      time: '上午6:00 ~ 下午6:00',
-      icon: '🌦',
-      desc: '多雲午後短暫雷陣雨',
-      rain: '40%'
-    }
-  ];
-
+const App = () => {
   return (
-    <div className="weather-container">
-      <h2 className="city">臺北市</h2>
-      <div className="cards">
-        {weatherData.map((item, index) => (
-          <div className="card" key={index}>
-            <div className="date">{item.date}</div>
-            <div className="time">{item.time}</div>
-            <div className="icon">{item.icon}</div>
-            <div className="desc">{item.desc}</div>
-            <div className="rain">☔ {item.rain}</div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+    <>
+    {/*36小時天氣預報的版型*/ }    
+     {/* 主要欄位
+            locationName(地點)、startTime(起始時間)、endTime(結束時間) */}
+            {/* 台北市
+        11日    上午6:00~下午6:00晴午後短暫雷陣雨 雨傘 80%
+        11日    下午6:00~上午6:00多雲短暫陣雨 雨傘 40%
+        12日    上午6:00~下午6:00多雲午後短暫雷陣雨 雨傘 40% */}
+    
+<h2>36小時天氣預報</h2>
+
+            <div className="cards">
+                {/* 取得縣市陣列跑迴圈 */}
+                <div className="card">
+                    {/* 卡片標題 */}
+                    <div className="card-hrader">
+                        台北市
+                    </div>
+                    {/* 卡片內容 */}
+                    <div className="card-body">
+                        {/* 取得陣列資料後跑迴圈 */}
+                        <div className="item">
+                            {/* 日期 */}
+                            <div className="date">
+                                11日
+                            </div>
+                            {/* 時間 */}
+                            <div className="time">
+                                上午6:00<br />
+                                ~<br />
+                                下午6:00<br />
+                            </div>
+                            {/* 天氣圖 */}
+                            <div className="weatherPic">
+                                {/* 天氣圖：使用執行路徑，所以要將圖片放在public資料夾中，才讀得到 */}
+                                <img src="./weatherIcon/晴午後短暫雷陣雨.svg" alt="" />
+                            </div>
+                            {/* 天氣名稱 */}
+                            <div className="weatherName">
+                                晴午後短暫雷陣雨
+                            </div>
+                            {/* 降雨率PoP */}
+                            <div className='pop'>
+                                {/* icon */}
+                                <BsFillUmbrellaFill />80%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+    
+    </>
+  )
 }
+
+export default App
