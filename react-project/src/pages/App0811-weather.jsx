@@ -1,6 +1,6 @@
 // src/pages/App0811-weather.jsx
 // src/pages/App0811-weather.jsx
-import '../css/App0811-weather.css';
+import '../css/App0811.css';
 
 
 export default function App() {
