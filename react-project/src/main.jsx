@@ -3,8 +3,8 @@ import { createRoot } from 'react-dom/client'
 //import './index.css'
 //import App from
 //  './App.jsx'
-import './sass/all.scss';
-//Simport App from './pages/App0813-weather3.jsx';
+import App from './pages/Home.jsx';
+//import App from './pages/App0813-weather3.jsx';
 //import './assets/css/app0805-2.css'
 //import'./.css/app0805-2.css'
 
@@ -12,6 +12,7 @@ import './sass/all.scss';
 createRoot(document.getElementById('root')).render(
   //嚴謹模式
 <StrictMode>
+ <HashRouter></HashRouter>
     <App />
   </StrictMode>,
 )
