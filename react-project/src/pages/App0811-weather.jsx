@@ -1,26 +1,33 @@
-import { useEffect } from 'react';
-import '../css/app0811.css'
-import { BsFillUmbrellaFill } from "react-icons/bs";
+import { IoUmbrellaOutline } from "react-icons/io5";
+import "../css/App0811-weather.css"
+import { useEffect } from "react";
 import axios from "axios";
 
 const App = () => {
-  return (
-    <>
-    {/*36小時天氣預報的版型*/ }    
-     {/* 主要欄位
-            locationName(地點)、startTime(起始時間)、endTime(結束時間) */}
-            {/* 台北市
-        11日    上午6:00~下午6:00晴午後短暫雷陣雨 雨傘 80%
-        11日    下午6:00~上午6:00多雲短暫陣雨 雨傘 40%
-        12日    上午6:00~下午6:00多雲午後短暫雷陣雨 雨傘 40% */}
-    
-<h2>36小時天氣預報</h2>
+    // useEffect()=>渲染後，只呼叫一次json
+    useEffect(() => {
+        // 非同步取資料        
+        (async () => {
+            // 取得public中的json檔
+            // const data = await axios.get('./json/F-C0032-001.json');
+            // 取得src中的json檔
+            const data = await axios.get('./src/json/F-C0032-001.json');
 
+            // 檢查是否連上json
+            console.log(data.data.cwaopendata.dataset);
+        })();
+    }, []);
+    
+    return (
+        <>
+            {/* 36小時天氣預報的版型 */}
+            {/* Wx(天氣現象)、MaxT(最高溫度)、MinT(最低溫度)、CI(舒適度)、PoP(降雨機率) */}
+            <h2>三十六小時天氣預報</h2>
             <div className="cards">
                 {/* 取得縣市陣列跑迴圈 */}
                 <div className="card">
                     {/* 卡片標題 */}
-                    <div className="card-hrader">
+                    <div className="card-header">
                         台北市
                     </div>
                     {/* 卡片內容 */}
@@ -47,21 +54,17 @@ const App = () => {
                                 晴午後短暫雷陣雨
                             </div>
                             {/* 降雨率PoP */}
-                            <div className='pop'>
+                            <div className="pop">
                                 {/* icon */}
-                                <BsFillUmbrellaFill />80%
+                                <IoUmbrellaOutline />
+                                80%
                             </div>
                         </div>
                     </div>
                 </div>
-                
-
-
-
             </div>
-    
-    </>
-  )
+        </>
+    )
 }
 
 export default App

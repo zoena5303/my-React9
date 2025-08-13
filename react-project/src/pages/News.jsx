@@ -1,9 +1,9 @@
 import React from 'react'
 
-function New() {
+const News = () => {
   return (
-    <div>我是<News></News></div>
+    <div>我是News</div>
   )
 }
 
-export default New
+export default News
