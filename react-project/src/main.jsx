@@ -3,7 +3,8 @@ import { createRoot } from 'react-dom/client'
 //import './index.css'
 //import App from
 //  './App.jsx'
-import App from './pages/App0811-weather.jsx';
+import './sass/all.scss';
+//Simport App from './pages/App0813-weather3.jsx';
 //import './assets/css/app0805-2.css'
 //import'./.css/app0805-2.css'
 
