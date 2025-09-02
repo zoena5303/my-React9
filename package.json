@@ -1,10 +1,22 @@
 {
+  "name": "my-react9",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
   "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "jquery": "^3.7.1",
-    "react-router-dom": "^7.8.0",
-    "sass": "^1.90.0"
+    "react-router-dom": "^7.8.2",
+    "sass": "^1.91.0"
   },
   "devDependencies": {
+    "vite": "^5.3.0",
+    "@vitejs/plugin-react": "^4.2.0",
     "vite-plugin-svgr": "^4.5.0"
   }
 }
